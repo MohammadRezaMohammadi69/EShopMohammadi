@@ -1,0 +1,132 @@
+﻿@model EShop.Models.Users
+
+@{
+	ViewData["Title"] = "Register";
+	Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section Styles{
+<style>
+	.shadow-sm, footer 
+	{
+		display: none !important;
+	}
+	.border_bottom 
+	{
+        border-bottom: 1px solid #dae1e7;
+    }
+
+    .loginicon {
+        top: 21px !important;
+        width: 20px;
+    }
+
+    .style {
+        padding-right: 40px;
+    }
+
+    div.input-group {
+        direction: rtl !important;
+    }
+</style>
+}
+@*<---- ثبت نام  ----->*@
+<div  id="container"  dir="rtl">
+    <div class="row">
+		@if(TempData["message"] != null)
+		{
+			var eror= await Utilities.JSON.ToObjet<ViewModel.ErorVM>(TempData["message"].ToString());
+				<div class="container">
+			       <div class="alert alert-@eror.AlertClass text-center" id="eror" role="alert">
+                  @eror.Message
+                    </div>
+				</div>
+		}
+        <div class="shadow col-12 col-xl-8 mx-auto mt-10 card border-3 " >     
+	            <div class="text-center my-3">
+                <img class="mx-auto img-responsive" src="~/HtmlTemplate/Mohammadi_Eshop/img/LogoWithOutBox.jpg" width="190" alt="فروشگاه لوازم خانگی و برقی">
+                </div>
+            <div class=" mx-auto col-10 mb-4">
+                <ul class="nav nav-tabs card-header-tabs " role="tablist">
+                    <li class="nav-item "><a class=" nav-link fw-medium " href="/Account/Login"><i class="ci-unlocked me-2 mt-n1"></i> ورود</a></li>
+                    <li class="nav-item "><a class=" nav-link fw-medium active" href="/Account/Register"><i class="ci-user me-2 mt-n1"></i> ثبت نام</a></li>
+                </ul>         
+            </div>
+			 <div class=" tab-content ">
+
+			 @using(Html.BeginForm("DoRegister","Account",FormMethod.Post))
+					{
+				     @Html.AntiForgeryToken();
+					<form asp-action="Rigester">
+						<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+						<div class="input-group my-4 mx-auto row">
+							<i class="loginicon ci-user-circle position-absolute translate-middle-y text-muted fs-base mr-1"></i>
+							<input asp-for="Name" class=" style form-control rounded-start col-xs-12 col-md-6" placeholder=" نام و نام خانوادگی *" />
+							<span asp-validation-for="Name" class="col-xs-12 col-md-6 pt-2 text-danger"></span>
+						</div>
+						<div class="input-group mb-4 mx-auto row">
+							<i class="loginicon fas ci-mobile position-absolute translate-middle-y text-muted fs-base mr-1"></i>
+							<input asp-for="UserName" type="text" class="style form-control rounded-start col-xs-12 col-md-6" placeholder="نام کاربری (موبایل) *" />
+							<span asp-validation-for="UserName" class="col-xs-12 col-md-6 pt-2 text-danger"></span>
+						</div>
+						<div class="input-group mb-4 mx-auto row">
+							<i class="loginicon ci-locked position-absolute translate-middle-y text-muted fs-base mr-1"></i>
+							<div class="password-toggle col-xs-12 col-md-6 p-0">
+								<input asp-for="Password" class=" style form-control rounded-start" type="password" placeholder="رمز عبور *" />
+								<label class="password-toggle-btn" aria-label="Show/hide password">
+									<input class="password-toggle-check" type="checkbox"><span class="password-toggle-indicator"></span>
+								</label>
+							</div>
+							<span asp-validation-for="Password" class="col-xs-12 col-md-6 pt-2 text-danger"></span>
+						</div>
+						<div class="input-group mb-4 mx-auto row">
+							<i class="loginicon ci-key position-absolute translate-middle-y text-muted fs-base mr-1"></i>
+							<div class="password-toggle col-xs-12 col-md-6 p-0">
+								<input asp-for="ConfrimePassword" class=" style form-control rounded-start"  type="password" placeholder="نکرار رمز عبور *" />
+								<label class="password-toggle-btn" aria-label="Show/hide password">
+									<input class="password-toggle-check" type="checkbox"><span class="password-toggle-indicator"></span>
+								</label>
+							</div>
+							<span asp-validation-for="ConfrimePassword" class="col-xs-12 col-md-6 pt-2 text-danger"></span>
+						</div>
+						<div class="input-group mb-4 mx-auto row">
+							<i class="loginicon ci-mail position-absolute translate-middle-y text-muted fs-base mr-1"></i>
+							<input asp-for="Email"  class=" style form-control rounded-start col-xs-12 col-md-6" placeholder="ایمیل" />
+							<span asp-validation-for="Email" class="col-xs-12 col-md-6 pt-2 text-danger"></span>
+						</div>
+						<div class="input-group mb-4 mx-auto row">
+							<i class="loginicon ci-smile position-absolute translate-middle-y text-muted fs-base mr-1"></i>
+							<input asp-for="Age" type="number" class=" style form-control rounded-start col-xs-12 col-md-6" placeholder="سن" />
+							<span asp-validation-for="Age" class="col-xs-12 col-md-6 pt-2 text-danger"></span>
+						</div>
+				
+						<div class="input-group mb-4 mx-auto row">
+							<i class="loginicon ci-card position-absolute translate-middle-y text-muted fs-base mr-1"></i>
+							<input asp-for="CodePosti" type="number" class=" style form-control rounded-start col-xs-12 col-md-6" placeholder="کد پستی" />
+							<span asp-validation-for="CodePosti" class="col-xs-12 col-md-6 pt-2 text-danger"></span>
+						</div>
+						<div class="input-group mb-4 mx-auto row">
+							<i class="loginicon ci-navigation position-absolute translate-middle-y text-muted fs-base mr-1"></i>
+							<textarea asp-for="Address" class=" style form-control rounded-start col-xs-12 col-md-6" placeholder="آدرس *" ></textarea>
+							<span asp-validation-for="Address" class="col-xs-12 col-md-6 pt-2 text-danger"></span>
+						</div>
+						  <div dir="ltr" class="pb-3">
+                            <button class="btn btn-primary btn-shadow " type="submit"> ثبت   <i class="ci-user me-2 ms-n1"></i>   </button>
+                            <a id="submit" class=" btn btn-secondary btn-shadow " href="@Url.Action("Index", "Home")"> صفحه اصلی <i class="ci-home "></i></a>
+                        </div>
+					</form>
+					}
+            </div>
+  
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+	$(document).ready(function(){
+		
+			$("#eror").delay(1500).slideUp(2000);
+	
+	});
+	</script>
+}

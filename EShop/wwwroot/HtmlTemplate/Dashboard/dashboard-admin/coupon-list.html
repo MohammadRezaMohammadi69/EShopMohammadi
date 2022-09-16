@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="fa" class="no-js" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#2690ba" />
+    <meta name="msapplication-navbutton-color" content="#2690ba">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#2690ba">
+    <title>کتاب درمانی ‍| پنل مدیریت</title>
+    <link rel="stylesheet" href="../css/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="scss/main.css">
+    <link rel="stylesheet" href="../plugin/swiperjs/swiper-bundle.css">
+    <link rel="stylesheet" href="../plugin/persian-calender/persian-datepicker.css">
+
+    <!-- Font Icons -->
+    <link href="../css/uicons-regular-rounded.css" media="all" rel="stylesheet" type="text/css">
+    <link href="../css/uicons-solid-rounded.css" media="all" rel="stylesheet" type="text/css">
+
+    <!-- Favicon -->
+    <!-- <link rel="icon" href="images/small-icon.png">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/logo-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/logo-114x114.png"> -->
+
+</head>
+
+<body>
+
+    <!-- Wrapper -->
+    <div class="wrapper">
+        <!-- Navbar -->
+        <nav id="navbarDash">
+            <div class="collapse-sidebar">
+                <button type="button" id="sidebarCollapse" class="btn btn-side">
+                    <span class="menu-lines">
+                        <span class="line line-1"></span>
+                        <span class="line line-2"></span>
+                        <span class="line line-3"></span>
+                    </span>
+                </button>
+            </div>
+            <div class="user-menu-content">
+                <!-- user Menu -->
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        کاربر ادمین
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#" target="_blank"><i class="fi-rr-computer"></i>صفحه اصلی
+                                سایت</a></li>
+                        <li><a class="dropdown-item" href="lock-panel.html"><i class="fi-rr-lock"></i>قفل پنل مدیریت</a>
+                        </li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#modal-exit"><i
+                                    class="fi-rr-sign-out"></i>خروج</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!--Page Content-->
+        <div id="contentDash">
+            <!--Sidebar-->
+            <nav id="sidebarDash">
+                <div class="sidebar-header">
+                    <div class="icon">
+                        <i class="fi-rr-book-alt"></i>
+                    </div>
+                    <h2>کتاب درمانی</h2>
+                    <button type="button" class="btn-close-sidebar"><i class="fr-rr-cross-small"></i></button>
+                </div>
+                <ul class="list-nav">
+                    <!-- پیشخوان -->
+                    <li class="nav-item">
+                        <a class="sub-item" href="index.html">
+                            <span class="icon"><i class="fi-rr-dashboard"></i></span>
+                            <span class="title">پیشخوان</span>
+                        </a>
+                    </li>
+                    <!-- سفارشات -->
+                    <li class="nav-item">
+                        <a class="sub-item" href="orders-list.html">
+                            <span class="icon"><i class="fi-rr-shopping-cart"></i></span>
+                            <span class="title">سفارشات</span>
+                        </a>
+                    </li>
+                    <!-- دسته‌بندی ها -->
+                    <li class="nav-item">
+                        <a class="sub-item" href="category.html">
+                            <span class="icon"><i class="fi-rr-apps-add"></i></span>
+                            <span class="title">دسته‌بندی ها</span>
+                        </a>
+                    </li>
+                    <!-- کتاب‌ها -->
+                    <li class="nav-item">
+                        <a class="sub-item" href="bookslist-paper.html">
+                            <span class="icon"><i class="fi-rr-book"></i></span>
+                            <span class="title">کتاب‌ها</span>
+                        </a>
+                    </li>
+                    <!-- بلاگ -->
+                    <li class="nav-item active">
+                        <a class="sub-item" href="blogs-list.html">
+                            <span class="icon"><i class="fi-rr-document"></i></span>
+                            <span class="title">بلاگ</span>
+                        </a>
+                    </li>
+                    <!-- لیست کاربران -->
+                    <li class="nav-item">
+                        <a class="sub-item" href="usersList.html">
+                            <span class="icon"><i class="fi-rr-portrait"></i></span>
+                            <span class="title">لیست کاربران</span>
+                        </a>
+                    </li>
+                    <!-- کوپن‌های تخفیف -->
+                    <li class="nav-item">
+                        <a class="sub-item" href="coupon-list.html">
+                            <span class="icon"><i class="fi-rr-earnings"></i></span>
+                            <span class="title">کوپن‌های تخفیف</span>
+                        </a>
+                    </li>
+                    <!--بنرها-->
+                    <li class="nav-item">
+                        <a class="sub-item" href="promotion-baners.html">
+                            <span class="icon"><i class="fi-rr-earnings"></i></span>
+                            <span class="title">بنرها</span>
+                        </a>
+                    </li>
+                    <!-- دیدگاه کاربران -->
+                    <li class="nav-item">
+                        <a class="sub-item" href="comments.html">
+                            <span class="icon"><i class="fi-rr-comment-alt"></i></span>
+                            <span class="title">دیدگاه کاربران</span>
+                        </a>
+                    </li>
+                    <!-- پیام‌ها -->
+                    <li class="nav-item">
+                        <a class="sub-item" href="messages.html">
+                            <span class="icon"><i class="fi-rr-envelope"></i></span>
+                            <span class="title">پیام‌ها</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="sidebar-overlay"></div>
+            <!--Body Content-->
+            <div id="mainDash" class="main-body-content">
+                <div class="main-header">
+                    <div class="inner">
+                        <div class="title">
+                            <i class="fi-rr-earnings"></i>
+                            <h1>کوپن‌های تخفیف</h1>
+                        </div>
+                        <div class="controller">
+                            <button type="button" class="btn btn-primary-outline btn-show-filter icon-right"
+                                data-bs-toggle="modal" data-bs-target="#modal-add-category"><i
+                                    class="fi fi-rr-settings-sliders"></i>جستجو و
+                                فیلتر</button>
+                            <a href="coupon-new.html" class="btn btn-primary icon-right"><i
+                                    class="fi fi-rr-add"></i>کوپن جدید</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="main-inner">
+                    <div class="search-content">
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-12">
+                                    <div class="inputgroup nopadding">
+                                        <input type="text" class="input" placeholder="جستجو">
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+                                    <div class="select-group">
+                                        <select class="form-select">
+                                            <option selected>همه محصولات</option>
+                                            <option value="1">فقط فعال</option>
+                                            <option value="2">فقط غیرفعال</option>
+                                            <option value="3">اتمام موجودی</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 col-md-6 col-sm-6 col-12">
+                                    <button type="button" class="btn btn-accent icon-right"><i
+                                            class="fi fi-rr-search"></i>اعمال فیلتر</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cards-list">
+                        <div class="card-coupon">
+                            <div class="card-inner">
+                                <div class="card-body">
+                                    <ul>
+                                        <li>
+                                            <span class="name">عنوان : </span>
+                                            <span class="desc">عید نوروز</span>
+                                        </li>
+                                        <li>
+                                            <span class="name">کد تخغیف : </span>
+                                            <span class="desc">norouz1401</span>
+                                        </li>
+                                        <li>
+                                            <span class="name">نوع : </span>
+                                            <span class="desc">درصد</span>
+                                        </li>
+                                        <li>
+                                            <span class="name">مقدار تخفیف : </span>
+                                            <span class="desc">15 درصد</span>
+                                        </li>
+                                        <li>
+                                            <span class="name">تاریخ شروع : </span>
+                                            <span class="desc">1401/12/21</span>
+                                        </li>
+                                        <li>
+                                            <span class="name">تاریخ پایان : </span>
+                                            <span class="desc">1401/12/29</span>
+                                        </li>
+                                        <li>
+                                            <span class="name">حداکثر تعداد کاربران : </span>
+                                            <span class="desc">100</span>
+                                        </li>
+                                        <li>
+                                            <span class="name">وضعیت : </span>
+                                            <span class="desc error">فعال</span>
+                                        </li>
+                                        <li>
+                                            <span class="name">تعداد مصرف شده : </span>
+                                            <span class="desc">69</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="status"></div>
+                                    <div class="buttons-group">
+                                        <a href="coupon-new.html" class="btn-footer primary"><i
+                                                class="fi fi-rr-pencil"></i>ویرایش</a>
+                                        <button type="button" class="btn-footer red" data-bs-toggle="modal"
+                                            data-bs-target="#modal-delete"><i class="fi fi-rr-trash"></i>حذف</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-coupon">
+                            <div class="card-inner">
+                                <div class="card-body">
+                                    <ul>
+                                        <li>
+                                            <span class="name">عنوان : </span>
+                                            <span class="desc">عید نوروز</span>
+                                        </li>
+                                        <li>
+                                            <span class="name">کد تخغیف : </span>
+                                            <span class="desc">norouz1401</span>
+                                        </li>
+                                        <li>
+                                            <span class="name">نوع : </span>
+                                            <span class="desc">درصد</span>
+                                        </li>
+                                        <li>
+                                            <span class="name">مقدار تخفیف : </span>
+                                            <span class="desc">15 درصد</span>
+                                        </li>
+                                        <li>
+                                            <span class="name">تاریخ شروع : </span>
+                                            <span class="desc">1401/12/21</span>
+                                        </li>
+                                        <li>
+                                            <span class="name">تاریخ پایان : </span>
+                                            <span class="desc">1401/12/29</span>
+                                        </li>
+                                        <li>
+                                            <span class="name">حداکثر تعداد کاربران : </span>
+                                            <span class="desc">100</span>
+                                        </li>
+                                        <li>
+                                            <span class="name">وضعیت : </span>
+                                            <span class="desc error">فعال</span>
+                                        </li>
+                                        <li>
+                                            <span class="name">تعداد مصرف شده : </span>
+                                            <span class="desc">69</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="status"></div>
+                                    <div class="buttons-group">
+                                        <a href="coupon-new.html" class="btn-footer primary"><i
+                                                class="fi fi-rr-pencil"></i>ویرایش</a>
+                                        <button type="button" class="btn-footer red" data-bs-toggle="modal"
+                                            data-bs-target="#modal-delete"><i class="fi fi-rr-trash"></i>حذف</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Exit -->
+    <div class="modal fade" id="modal-exit" tabindex="-1" aria-labelledby="modal-exit-title" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modal-exit-title"><i class="fi fi-rr-sign-out"></i>خروج</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h6 class="msg">از حساب کاربری خود خارج می شوید؟</h6>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary-glass icon-right"><i
+                            class="fi fi-rr-cross"></i>خیر</button>
+                    <button type="button" class="btn btn-primary icon-right"><i class="fi fi-rr-check"></i>بلی</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal Delete -->
+    <div class="modal fade" id="modal-delete" tabindex="-1" aria-labelledby="modal-delete-title" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modal-delete-title"><i class="fi fi-rr-trash"></i>حذف</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h6 class="msg">این کوپن حذف شود؟</h6>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary-glass icon-right"><i
+                            class="fi fi-rr-cross"></i>خیر</button>
+                    <button type="button" class="btn btn-danger icon-right"><i class="fi fi-rr-check"></i>بلی</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="../js/jquery-3.3.1.min.js"></script>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="../js/scripts-dashboard.js"></script>
+    <script src="../plugin/persian-calender/persian-date.min.js"></script>
+    <script src="../plugin/persian-calender/persian-datepicker.min.js"></script>
+    <script src="../plugin/persian-calender/persian-datepicker-initial.js"></script>
+
+</body>
+
+</html>

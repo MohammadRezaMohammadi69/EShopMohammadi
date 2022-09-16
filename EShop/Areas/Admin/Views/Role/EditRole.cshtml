@@ -1,0 +1,69 @@
+﻿@model EShop.Models.Roles
+
+@{
+	ViewData["Title"] = "EditRole";
+
+	Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<div class="container-fluid py-4">
+	@if (TempData["message"] != null)
+	{
+		var eror = await Utilities.JSON.ToObjet<ViewModel.ErorVM>(TempData["message"].ToString());
+		<div class="container">
+			<div class="col-6 mx-auto alert alert-@eror.AlertClass text-center text-secondary" id="eror" role="alert">
+				@eror.Message
+			</div>
+		</div>
+	}
+	<div class="row">
+		<div class="col-12">
+			<div class="card mb-4">
+				<div class="card-header pb-0 bg-gradient-secondary blur shadow-blur d-flex">
+					<button type="button" class="btn-social bs-twitter me-2 pt-1">
+					  <a class="ci-list fs-5" asp-action="Index"></a>
+                    </button>
+					<h6 class="text-secondary p-2"> ویرایش نقش </h6>
+				</div>
+				<div class="card-body px-0 pt-0 pb-2">
+					<div class="container mt-5" dir="rtl">
+					
+					@using(Html.BeginForm("UpdateRole", "Role", new {area="Admin"} , FormMethod.Post))
+						{
+							@Html.AntiForgeryToken();
+						
+								<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+								<input type="hidden" asp-for="RoleId" />
+							 
+								<div class=" form-group my-4 mx-auto ">
+									<label  class="control-label">نام نقش  </label>
+									<div class="row">
+									  <div class="col-xs-12 col-md-6">
+								     	<input asp-for="RoleName" class="form-control " />
+								      </div>
+									  <div class="col-xs-12 col-md-6">
+									    <span asp-validation-for="RoleName" class="text-danger pt-2 "></span>
+									  </div>
+									</div>
+								</div>
+								<div class="form-group">
+									<button type="submit" value="Save" class="btn btn-info"> ویرایش </button>
+								</div>	
+						}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+@section Scripts
+{
+<script>
+	$(document).ready(function () {
+	   $("#eror").delay(1500).slideUp(2000);
+	 });
+</script>
+
+}

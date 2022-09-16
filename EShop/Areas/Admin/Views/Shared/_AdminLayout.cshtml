@@ -1,0 +1,185 @@
+﻿<!DOCTYPE html>
+<html lang="fa" class="no-js" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#2690ba" />
+    <meta name="msapplication-navbutton-color" content="#2690ba">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#2690ba">
+    <title>کتاب درمانی ‍| پنل مدیریت</title>
+    <link rel="stylesheet" href="~/HtmlTemplate/Dashboard/css/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="~/HtmlTemplate/Dashboard/dashboard-admin/scss/main.css">
+    <link rel="stylesheet" href="~/HtmlTemplate/Dashboard/plugin/persian-calender/persian-datepicker.css">
+
+    <!-- Font Icons -->
+    
+    <link href="~/css/uicons-regular-rounded.css" media="all" rel="stylesheet" type="text/css">
+    <link href="~/css/uicons-solid-rounded.css" media="all" rel="stylesheet" type="text/css">
+   
+       @RenderSection("Styles", required: false)
+</head>
+<body>
+    <!-- Wrapper -->
+    <div class="wrapper">
+        <!-- Navbar -->
+        <nav id="navbarDash">
+            <div class="collapse-sidebar">
+                <button type="button" id="sidebarCollapse" class="btn btn-side">
+                    <span class="menu-lines">
+                        <span class="line line-1"></span>
+                        <span class="line line-2"></span>
+                        <span class="line line-3"></span>
+                    </span>
+                </button>
+            </div>
+            <div class="user-menu-content">
+                <!-- user Menu -->
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        کاربر ادمین
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#" target="_blank"><i class="fi-rr-computer"></i>صفحه اصلی
+                                سایت</a></li>
+                        <li><a class="dropdown-item" href="lock-panel.html"><i class="fi-rr-lock"></i>قفل پنل مدیریت</a>
+                        </li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#modal-exit"><i
+                                    class="fi-rr-sign-out"></i>خروج</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!--Page Content-->
+        <div id="contentDash">
+            <!--Sidebar-->
+            <nav id="sidebarDash">
+                <div class="sidebar-header">
+                    <div class="icon">
+                        <i class="fi-rr-book-alt"></i>
+                    </div>
+                    <h2> لوازم برقی و خانگی محمدی </h2>
+                    <button type="button" class="btn-close-sidebar"><i class="fr-rr-cross-small"></i></button>
+                </div>
+                <ul class="list-nav">
+                    <!-- پیشخوان -->
+                    <li class="nav-item">
+                        <a class="sub-item" href="index.html">
+                            <span class="icon"><i class="fi-rr-dashboard"></i></span>
+                            <span class="title">پیشخوان</span>
+                        </a>
+                    </li>
+                    <!-- سفارشات -->
+                    <li class="nav-item">
+                        <a class="sub-item" href="orders-list.html">
+                            <span class="icon"><i class="fi-rr-shopping-cart"></i></span>
+                            <span class="title">سفارشات</span>
+                        </a>
+                    </li>
+                    <!-- دسته‌بندی ها -->
+                    <li class="nav-item">
+                        <a class="sub-item" href="category.html">
+                            <span class="icon"><i class="fi-rr-apps-add"></i></span>
+                            <span class="title">دسته‌بندی ها</span>
+                        </a>
+                    </li>
+                    <!-- کتاب‌ها -->
+                    <li class="nav-item">
+                        <a class="sub-item" href="bookslist-paper.html">
+                            <span class="icon"><i class="fi-rr-book"></i></span>
+                            <span class="title">کتاب‌ها</span>
+                        </a>
+                    </li>
+                    <!-- بلاگ -->
+                    <li class="nav-item">
+                        <a class="sub-item" href="blogs-list.html">
+                            <span class="icon"><i class="fi-rr-document"></i></span>
+                            <span class="title">بلاگ</span>
+                        </a>
+                    </li>
+                    
+                    <!-- لیست کاربران -->
+                    <li class="nav-item">
+                        <a class="sub-item" href="~/Admin/User/Index">
+                            <span class="icon"><i class="fi-rr-portrait"></i></span>
+                            <span class="title"> کاربران</span>
+                        </a>
+                    </li>
+                    <!-- کوپن‌های تخفیف -->
+                    <li class="nav-item">
+                        <a class="sub-item" href="~/Admin/Role/Index">
+                            <span class="icon"><i class="fi fi-rr-layout-fluid"></i></span>
+                            <span class="title"> نقش ها </span>
+                        </a>
+                    </li>
+                    <!--بنرها-->
+                    <li class="nav-item">
+                        <a class="sub-item" href="promotion-baners.html">
+                            <span class="icon"><i class="fi-rr-earnings"></i></span>
+                            <span class="title">بنرها</span>
+                        </a>
+                    </li>
+                    <!-- دیدگاه کاربران -->
+                    <li class="nav-item">
+                        <a class="sub-item" href="comments.html">
+                            <span class="icon"><i class="fi-rr-comment-alt"></i></span>
+                            <span class="title">دیدگاه کاربران</span>
+                        </a>
+                    </li>
+                    <!-- پیام‌ها -->
+                    <li class="nav-item">
+                        <a class="sub-item" href="messages.html">
+                            <span class="icon"><i class="fi-rr-envelope"></i></span>
+                            <span class="title">پیام‌ها</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="sidebar-overlay"></div>
+            <!--Body Content-->
+             @RenderBody()
+             
+           
+        </div>
+        
+    </div>
+   
+    <!-- Modal Exit -->
+    <div class="modal fade" id="modal-exit" tabindex="-1" aria-labelledby="modal-exit-title" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modal-exit-title"><i class="fi fi-rr-sign-out"></i>خروج</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h6 class="msg">از حساب کاربری خود خارج می شوید؟</h6>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary-glass icon-right"><i
+                            class="fi fi-rr-cross"></i>خیر</button>
+                    <button type="button" class="btn btn-primary icon-right"><i class="fi fi-rr-check"></i>بلی</button>
+                </div>
+            </div>
+        </div>
+    </div>
+ 
+</body>
+
+</html>
+   <!-- Scripts -->
+    <script src="~/HtmlTemplate/Dashboard/js/jquery-3.3.1.min.js"></script>
+    <script src="~/HtmlTemplate/Dashboard/js/bootstrap.bundle.min.js"></script>
+    <script src="~/lib/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="~/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"></script>
+    <script src="~/HtmlTemplate/Dashboard/js/scripts-dashboard.js"></script>
+    <script src="~/HtmlTemplate/Dashboard/plugin/persian-calender/persian-date.min.js"></script>
+    <script src="~/HtmlTemplate/Dashboard/plugin/persian-calender/persian-datepicker.min.js"></script>
+    <script src="~/HtmlTemplate/Dashboard/plugin/persian-calender/persian-datepicker-initial.js"></script>
+ 
+    @RenderSection("Scripts", required: false)

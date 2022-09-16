@@ -1,0 +1,23 @@
+/*#region ----------------- Modal */
+.modal-content {
+    border: none;
+    border-radius: $borderRadius10;
+}
+.modal-title {
+    .fi {
+        margin-left: 10px;
+        position: relative;
+        top: 5px;
+        color: $textGrey;
+    }
+}
+.modal-body {
+    padding-bottom: 0;
+    .msg {
+        color: $textGrey;
+    }
+}
+.modal-footer {
+    border: none;
+}
+/*#endregion -------------- Modal */

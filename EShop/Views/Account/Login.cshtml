@@ -1,0 +1,77 @@
+﻿
+@model ViewModel.LoginVM
+@{
+	 ViewData["Title"] = "Login";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section Styles{
+    <style>
+        .shadow-sm, footer {
+            display: none !important;
+        }
+   
+    </style>
+}
+<div  id="container "  dir="rtl">
+    <div class="row ">
+         @if(TempData["message"] != null)
+		{
+			var eror= await Utilities.JSON.ToObjet<ViewModel.ErorVM>(TempData["message"].ToString());
+				<div class="container">
+			       <div class="col-6 mx-auto alert alert-@eror.AlertClass text-center" id="eror" role="alert">
+                  @eror.Message
+                    </div>
+				</div>
+	   }
+        <div class="shadow col-10 col-xl-4 mx-auto mt-10 card border-3 " >
+
+                <div class="text-center my-3">
+                <img class="mx-auto img-responsive" src="~/HtmlTemplate/Mohammadi_Eshop/img/LogoWithOutBox.jpg" width="190" alt="فروشگاه لوازم خانگی و برقی">
+                </div>
+            <div class=" mx-auto col-10 mb-4">
+                <ul class="nav nav-tabs card-header-tabs  " role="tablist">
+                    <li class="nav-item "><a class=" nav-link fw-medium active" href="/Accounts/Lgin"><i class="ci-unlocked me-2 mt-n1"></i> ورود</a></li>
+                    <li class="nav-item "><a class=" nav-link fw-medium " href="/Account/Register"><i class="ci-user me-2 mt-n1"></i> ثبت نام</a></li>
+                </ul>
+            </div>
+            <div class=" tab-content">
+
+                @using (Html.BeginForm("DoLogin","Account",FormMethod.Post))
+                {
+                    <form class="needs-validation tab-pane fade show active" autocomplete="off" novalidate id="signin-tab">
+                        <div class="mb-3">
+                            <label class="form-label" for="si-email"> شماره موبایل </label>
+                            <input asp-for="UserName" type="text" class="form-control " />
+							<span asp-validation-for="UserName" class="col-12 pt-2 text-danger d-inline-block"></span>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="si-password">رمز عبور</label>
+                            <div class="password-toggle">
+								<input asp-for="Password" class=" form-control" type="password" />
+								<label class="password-toggle-btn" aria-label="Show/hide password">
+									<input class="password-toggle-check" type="checkbox"><span class="password-toggle-indicator"></span>
+								</label>
+							</div>
+							<span asp-validation-for="Password" class="col-12 pt-2 text-danger d-inline-block"></span>
+                        </div>
+                        <div class="mb-3 d-flex flex-wrap justify-content-between">
+                            <div class="form-check mb-2">
+                                <input asp-for="RememberMe" class="form-check-input" type="checkbox" value="true" id="si-remember" name="RememberMe" />
+                                <label class="form-check-label" for="RememberMe">مرا به خاطر بسپار</label>
+                            </div>
+                        </div>
+
+                        <div dir="ltr" class="pb-3">
+                            <button id="submit" class="btn btn-primary btn-shadow " type="submit"> ورود  <i class="ci-sign-in me-2 ms-n21"></i></button>
+                            <a id="submit" class="btn btn-secondary btn-shadow " href="@Url.Action("Index", "Home")"> صفحه اصلی   <i class="ci-home "></i></a>
+                        </div>
+                        
+                    </form>
+                }
+            </div>
+  
+        </div>
+    </div>
+</div>
+

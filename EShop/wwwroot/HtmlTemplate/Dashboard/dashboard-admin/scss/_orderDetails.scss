@@ -1,0 +1,155 @@
+/*#region ----------------- Order Details */
+.order-details {
+    .grid-layout {
+        display: grid;
+        grid-template-columns: auto 270px;
+    }
+    .information {
+        padding-left: 20px;
+        ul {
+            display: grid;
+            grid-template-columns: 50% 50%;
+            align-items: flex-start;
+            li {
+                font-size: 14px;
+                font-weight: 500;
+                margin-bottom: 15px;
+                .name {
+                    color: $textGrey;
+                }
+                .desc {
+                    color: $textDark;
+                    &.new {
+                        color: $red;
+                    }
+                    &.waiting {
+                        color: $primary;
+                    }
+                    &.completed {
+                        color: $green;
+                    }
+                }
+            }
+        }
+        .address-content {
+            font-size: 14px;
+            font-weight: 500;
+            margin-bottom: 10px;
+            .name {
+                color: $textGrey;
+            }
+            .desc {
+                color: $textDark;
+            }
+        }
+        .description {
+            padding: 15px 0;
+            border-top: 2px dashed $borderColorDark;
+            margin-top: 30px;
+            font-size: 14px;
+            font-weight: 500;
+            color: $textDark;
+            span {
+                color: $textGrey;
+                margin-left: 10px;
+            }
+        }
+    }
+    .control-order {
+        .control-inner {
+            background-color: $primaryLight;
+            padding: 15px;
+            border-radius: $borderRadius10;
+            .item {
+                margin-bottom: 15px;
+                padding-bottom: 15px;
+                border-bottom: 1px dashed $primary;
+                &:last-child {
+                    margin-bottom: 0;
+                    padding-bottom: 0;
+                    border: none;
+                }
+                .btn {
+                    width: 100%;
+                }
+                .input {
+                    text-align: center;
+                }
+                .select-group,
+                .inputgroup {
+                    margin-bottom: 1rem;
+                }
+            }
+        }
+    }
+}
+.products-list-content {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba($color: #000000, $alpha: 0.1);
+    .list-title {
+        font-size: 18px;
+        font-weight: 700;
+        color: $textDark;
+        margin-bottom: 1.5rem;
+    }
+}
+@media (max-width: 1199px) {
+    .order-details {
+        .grid-layout {
+            grid-template-columns: 100%;
+        }
+        .information {
+            padding-left: 0;
+        }
+        .control-order .control-inner {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            .item {
+                flex: 0 0 50%;
+                width: 50%;
+                border-bottom: none;
+                margin-bottom: 0;
+                padding: 0 10px;
+                &:first-child {
+                    flex: 0 0 100%;
+                    width: 100%;
+                    border-bottom: 1px dashed #2690ba;
+                    margin-bottom: 15px;
+                    padding: 0 0 15px 0;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 575px) {
+    .order-details {
+        .information {
+            ul {
+                grid-template-columns: 100%;
+            }
+        }
+        .control-order .control-inner {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            flex-direction: column;
+            .item {
+                flex: 0 0 100%;
+                width: 100%;
+                border-bottom: 15px;
+                margin-bottom: 15px;
+                padding: 0 0 15px 0;
+                border-bottom: 1px dashed #2690ba;
+                &:first-child {
+                    border-bottom: 1px dashed #2690ba;
+                    margin-bottom: 15px;
+                }
+            }
+        }
+    }
+}
+/*#endregion -------------- Order Details */

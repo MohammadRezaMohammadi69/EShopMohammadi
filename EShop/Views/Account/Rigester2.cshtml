@@ -1,0 +1,129 @@
+﻿@model EShop.Models.Users
+
+@{
+    ViewData["Title"] = "Rigester2";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section Styles{
+ 
+    <link href="~/Content/JalaliDatePicker-main/dist/jalalidatepicker.min.css" rel="stylesheet" />
+    <style>
+        .loginicon {
+            top: 21px !important;
+            width: 20px;
+        }
+
+        hr {
+            background: linear-gradient(120deg, #89f7fe 0%, #66a6ff 100%);
+        }
+
+        .style {
+            padding-right: 40px;
+        }
+
+        div.input-group {
+            direction: rtl !important;
+        }
+        @@media only screen and (max-width: 1500px) {
+            jdp-container {
+                display: none !important;
+            }
+        }
+    </style>
+}
+<div class=" py-1 shadow " style="background: linear-gradient(120deg, #89f7fe 0%, #66a6ff 100%);">
+    <div class="container-fluid d-lg-flex justify-content-between my-auto shadow">
+        <div class="order-lg-2 my-auto p-1 ">
+            <nav aria-label="breadcrumb ">
+                <ol class="breadcrumb flex-lg-nowrap justify-content-center justify-content-lg-start">
+                    <li class="breadcrumb-item text-nowrap active" aria-current="page">ثبت نام کاربر</li>
+                    <li class="breadcrumb-item"><a class="text-nowrap" href="index.html"><i class="ci-home"></i>صفحه اصلی </a></li>
+
+                </ol>
+            </nav>
+        </div>
+        <div class="order-lg-1 pe-lg-4 text-center text-lg-start">
+
+        </div>
+
+    </div>
+</div>
+<div class="container py-4 py-lg-5 my-4">
+    <div class="row">
+        <div class="col-md-12 ">
+
+            <div class="card border-0 shadow">
+                <div class="card-body p-md-5 ">
+                    <h3 class="h3 mb-1" dir="rtl">ثبت نام کاربر</h3>
+                    <div class="py-1 ">
+
+                        <div class="d-inline-block align-middle"><a class="btn-social bs-google me-2 mb-2" href="#" data-bs-toggle="tooltip" title="Sign in with Google"><i class="ci-add-user"></i></a><a class="btn-social bs-facebook me-2 mb-2" href="#" data-bs-toggle="tooltip" title="Sign in with Facebook"><i class="ci-facebook"></i></a><a class="btn-social bs-twitter me-2 mb-2" href="#" data-bs-toggle="tooltip" title="Sign in with Twitter"><i class="ci-twitter"></i></a></div>
+                    </div>
+                    <hr>
+                    <br />
+              
+                        @Html.AntiForgeryToken()
+                      
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                    <form class="needs-validation" novalidate>
+                        <div class="input-group mb-4 mx-auto  row">
+                            <i class="loginicon ci-user-circle position-absolute translate-middle-y text-muted fs-base mr-1"></i>
+                            @Html.TextBoxFor(model => model.Name, new { @class = " style form-control rounded-start col-xs-12 col-md-6", type = "text", placeholder = "نام و نام خانوادگی" })
+                            @Html.ValidationMessageFor(model => model.Name, "", new { @class = " col-xs-12 col-md-6 pt-2 text-danger" })
+                        </div>
+                        <div class="input-group mb-4 mx-auto  row">
+                            <i class="loginicon fa ci-mail position-absolute translate-middle-y text-muted fs-base mr-1"></i>
+                            @Html.TextBoxFor(model => model.UserName, new { @class = " style form-control rounded-start col-xs-12 col-md-6", type = "text", placeholder = "مویایل" })
+                            @Html.ValidationMessageFor(model => model.UserName, "", new { @class = "col-xs-12 col-md-6 pt-2 text-danger" })
+                        </div>
+
+                        <div class="input-group mb-4 mx-auto row">
+                            <i class="loginicon ci-locked position-absolute translate-middle-y text-muted fs-base mr-1"></i>
+                            <div class="password-toggle col-xs-12 col-md-6 p-0" >
+                                @Html.TextBoxFor(model => model.Password, new { @class = " style form-control rounded-start ", type = "password", placeholder = "رمز عبور" })
+                                <label class="password-toggle-btn" aria-label="Show/hide password">
+                                    <input class="password-toggle-check" type="checkbox"><span class="password-toggle-indicator"></span>
+                                </label>
+                            </div>
+                            @Html.ValidationMessageFor(model => model.Password, "", new { @class = "col-xs-12 col-md-6 pt-2 text-danger" })
+                        </div>
+                        <div class="input-group mb-4 mx-auto row">
+                            <i class="loginicon ci-key position-absolute  translate-middle-y text-muted fs-base mr-1"></i>
+                            <div class="password-toggle col-xs-12 col-md-6 p-0">
+                                @Html.TextBoxFor(model => model.ConfrimePassword, new { @class = " style form-control rounded-start ", type = "password", placeholder = "تکرار رمز عبور" })
+                                <label class="password-toggle-btn" aria-label="Show/hide password">
+                                    <input class="password-toggle-check" type="checkbox"><span class="password-toggle-indicator"></span>
+                                </label>
+                            </div>
+                            @Html.ValidationMessageFor(model => model.ConfrimePassword, "", new { @class = "col-xs-12 col-md-6 pt-2 text-danger" })
+                        </div>
+                        <div class="input-group mb-4 mx-auto row">
+                            <i class="loginicon fas ci-heart-circle position-absolute  translate-middle-y text-muted fs-base mr-1 "></i>
+                            @Html.TextBoxFor(model => model.Email, new { @class = " style form-control rounded-start col-xs-12 col-md-6", id = "BirthDate", type = "text", value = "", placeholder = "  تاریخ تولد ( 22 / 07 / 1369)" })
+
+                            @Html.ValidationMessageFor(model => model.Email, "", new { @class = "col-xs-12 col-md-6 pt-2 text-danger" })
+
+                        </div>
+                        <div class="input-group mb-4 mx-auto row">
+                            <i class="loginicon fas ci-mobile position-absolute  translate-middle-y text-muted fs-base mr-1 "></i>
+                            @Html.TextBoxFor(model => model.Age, new { @class = " style form-control rounded-start col-xs-12 col-md-6", type = "tel", placeholder = "شماره موبایل" })
+                            @Html.ValidationMessageFor(model => model.Age, "", new { @class = "col-xs-12 col-md-6 pt-2 text-danger" })
+
+                        </div>
+              
+         
+
+
+                        <hr class="my-3">
+                        <div class=" pt-4" dir="rtl">
+                            <button class="btn btn-primary btn-shadow d-block " type="submit"> ثبت اطلاعات  <i class="ci-user me-2 ms-n1"></i>   </button>
+                        </div>
+                    </form>
+                   
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+

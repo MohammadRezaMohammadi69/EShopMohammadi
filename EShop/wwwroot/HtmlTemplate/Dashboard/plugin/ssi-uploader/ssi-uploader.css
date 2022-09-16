@@ -1,0 +1,96 @@
+.image-uploader{margin-bottom: 20px;}
+.ssi-button {display: inline-block;text-align: center;vertical-align: middle;font-size: 14px;font-weight: 500;text-decoration: none;border:none;cursor: pointer;padding: 8px 15px;margin: 0 0 0 10px;border-radius: 8px;color: #fff;}
+.ssi-button.error {background: rgba(0, 0, 0, 0.5);width: 30px;height: 30px;position: absolute;right: 5px;top: 0;border-radius: 50%;}
+.ssi-button.error .fi{font-size: 16px;line-height: 0 !important;position: relative;top: 3px;}
+.ssi-button.error:hover {background: rgba(0, 0, 0, 0.6);}
+.ssi-button.error:active {background: rgba(0, 0, 0, 0.7);}
+.ssi-button.info {background: #fa1a11;transition:all .2s ease-in;-o-transition:all .2s ease-in;-moz-transition:all .2s ease-in;-webkit-transition:all .2s ease-in;}
+.ssi-button.info:hover {background: #D40D04;transition:all .2s ease-in;-o-transition:all .2s ease-in;-moz-transition:all .2s ease-in;-webkit-transition:all .2s ease-in;}
+.ssi-button.info:active {background: #FB4A43;}
+.ssi-button.success {background: transparent;color: #2690ba;border: 2px solid #2690ba;transition:all .2s ease-in;-o-transition:all .2s ease-in;-moz-transition:all .2s ease-in;-webkit-transition:all .2s ease-in;}
+.ssi-button.success:hover {background: #2690ba;color: #fff;transition:all .2s ease-in;-o-transition:all .2s ease-in;-moz-transition:all .2s ease-in;-webkit-transition:all .2s ease-in;}
+.ssi-button.success:active {background: #000;}
+.ssi-button[disabled] {opacity: 0.8;pointer-events: none;}
+.ssi-statusLabel {padding: 2px 6px;text-align: center;font-size: 10px;color: #fff;font-weight: 600;border-radius: 2px;}
+.ssi-statusLabel.error {background: #fa1a11;}
+.ssi-statusLabel.success {background: #40b056;}
+.ssi-previewBox {float: right;text-align: right;width: 100%;color: #ccc;padding: 10px;}
+.ssi-dropZonePreview {min-height: 200px;border-radius: 10px;border: 2px dashed #ccc;}
+.ssi-removeBtn {margin: 5px 0 5px 0;padding: 0;}
+#ssi-info::after {content: ' ';display: block;clear: both;}
+#ssi-info #ssi-DropZoneBack {z-index: -1;text-align: center;overflow: hidden;margin-bottom: 10px;}
+#ssi-info #ssi-fileNumber {float: right;display: none;}
+#ssi-info #ssi-fileNumber:hover {cursor: pointer;color: #636363;}
+.ssi-uploader::after {content: ' ';display: block;clear: both;}
+.ssi-uploadFiles {
+  position: relative;
+  float: left;
+  border: 1px solid #aaaaaa;
+  overflow: hidden;
+  border-radius: 3px;
+  width: 180px;
+  min-height: 32px;
+  margin: 2px 2px 2px 0;
+  font-size: 15px;
+  vertical-align: middle;
+  line-height: 30px;
+  transition: height .3s;
+  background: #FFFFFF;
+  padding-right: 1px;
+}
+.ssi-previewBox.ssi-dragOver, .ssi-dragOver .ssi-dropZone {color: #ba2919;border-color: #ba2919;}
+.ssi-buttonWrapper {float: right;padding: 5px 0 10px 5px;}
+.ssi-noPreviewMessage {position: relative;z-index: 1;border-radius: 4px;margin: 1px;float: right;width: 35px;height: 31px;padding: 0;}
+.ssi-noPreviewMessage span {margin: 0 auto;}
+.ssi-noPreviewSubMessage {width: 15px;height: 15px;padding: 0;}
+.ssi-totalvalue {float: right;margin: 2px;}
+.ssi-upImgTd {position: relative;}
+.ssi-upImgTd .fa-spin {display: inline-block;position: absolute;top: 45%;left: 45%;}
+.ssi-uploadProgressNoPreview {position: absolute;display: block;text-align: center;width: 0;height: 35px;background: #5cb85c;transition: width .3s;opacity: 0.6;}
+.ssi-uploadNoDropZone {border: 1px solid #ccc;}
+.ssi-uploadProgress {margin-top: 4px;display: block;text-align: center;width: 0;height: 10px;background: #5cb85c;transition: width .3s;}
+.ssi-uploadProgressNoPre {position: absolute;height: 19px;margin-top: 0;opacity: 0.6;}
+.ssi-uploaderNP {position: relative;}
+.ssi-uploaderNP::after {content: ' ';display: block;clear: both;}
+.ssi-uploadDetails {width: 180px;max-height: 0;top: 37px;background: #FFFFFF;position: absolute;transition: max-height .2s ease-out;border-radius: 3px;overflow: hidden;padding-right: 2px;}
+.ssi-uploadBoxWrapper {float: left;}
+.ssi-uploadBoxOpened {max-height: 200px;z-index: 2000;overflow: auto;border: 0.1mm solid #dcdcdc;transition: max-height .5s ease-out;}
+table.ssi-fileList {font-size: 10px;margin: 5px;}
+table.ssi-fileList tr td:first-child {border: 0.1mm solid #dcdcdc;width: 89%;position: relative;}
+table.ssi-fileList tr td:nth-child(2) {padding-left: 7px;}
+table.ssi-fileList tr {line-height: 18px;}
+table.ssi-fileList tr.ssi-space > td {border: none;padding-bottom: 2px;}
+.ssi-uploadProgress.hide {margin-top: 0;opacity: 0;transition: opacity 1.3s;}
+.ssi-canceledProgressBar {width: 100% !important;background: #d9534f;}
+.ssi-imgToUploadTable h2 {margin: 0;}
+.ssi-hidden {display: none;}
+.ssi-imgToUploadTable tr:first-child td:first-child {height: 126px;}
+.ssi-imgToUploadTable tr td {width: 140px;}
+.ssi-imgToUploadTable {
+  border: 1px solid #e1e1e1;
+  color: #333;
+  font-size: 12px;
+  font-weight: 400;
+  margin-left: 10px;
+  padding: 5px;
+  display: inline-block;
+  width: 150px;
+  position: relative;
+  -ms-word-break: break-all;
+  word-break: break-all;
+  word-break: break-word;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+      hyphens: auto;
+}
+.ssi-imgToUpload {width: 100%;height: auto;}
+.ssi-btnIn {float: left;}
+.ssi-ieCompatibilityForm {display: none;}
+span.ssi-InputLabel input[type="file"] {display: none;}
+.ssi-abortUpload {padding: 0;}
+.ssi-abortUpload .ban7w {margin: 0;}
+.ssi-removeBtnNP {border: none;color: #ff696d;font-size: 11px;margin: 0;padding: 0;}
+.ssi-InputLabel.disabled, .ssi-InputLabel.disabled:hover, .ssi-InputLabel.disabled:active {cursor: not-allowed;background: #5cb85c;opacity: .65;}
+.ssi-check {color: #005900;}
+.ssi-boxHover {cursor: pointer;}
+.ssi-upI.imgTd {position: relative;}

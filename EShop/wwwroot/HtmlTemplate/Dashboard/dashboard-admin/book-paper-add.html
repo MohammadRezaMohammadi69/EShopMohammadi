@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="fa" class="no-js" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#2690ba" />
+    <meta name="msapplication-navbutton-color" content="#2690ba">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#2690ba">
+    <title>کتاب درمانی ‍| پنل مدیریت</title>
+    <link rel="stylesheet" href="../css/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="scss/main.css">
+    <link rel="stylesheet" href="../plugin/swiperjs/swiper-bundle.css">
+    <link rel="stylesheet" href="../plugin/ssi-uploader/ssi-uploader.css">
+    <link rel="stylesheet" href="../plugin/persian-calender/persian-datepicker.css">
+    <link rel="stylesheet" href="../plugin/select2/select2.min.css">
+
+    <!-- Font Icons -->
+    <link href="../css/uicons-regular-rounded.css" media="all" rel="stylesheet" type="text/css">
+    <link href="../css/uicons-solid-rounded.css" media="all" rel="stylesheet" type="text/css">
+
+    <!-- Favicon -->
+    <!-- <link rel="icon" href="images/small-icon.png">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/logo-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/logo-114x114.png"> -->
+
+</head>
+
+<body>
+
+    <!-- Wrapper -->
+    <div class="wrapper">
+        <!-- Navbar -->
+        <nav id="navbarDash">
+            <div class="collapse-sidebar">
+                <button type="button" id="sidebarCollapse" class="btn btn-side">
+                    <span class="menu-lines">
+                        <span class="line line-1"></span>
+                        <span class="line line-2"></span>
+                        <span class="line line-3"></span>
+                    </span>
+                </button>
+            </div>
+            <div class="user-menu-content">
+                <!-- user Menu -->
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        کاربر ادمین
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#" target="_blank"><i class="fi-rr-computer"></i>صفحه اصلی
+                                سایت</a></li>
+                        <li><a class="dropdown-item" href="lock-panel.html"><i class="fi-rr-lock"></i>قفل پنل مدیریت</a>
+                        </li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#modal-exit"><i
+                                    class="fi-rr-sign-out"></i>خروج</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!--Page Content-->
+        <div id="contentDash">
+            <!--Sidebar-->
+            <nav id="sidebarDash">
+                <div class="sidebar-header">
+                    <div class="icon">
+                        <i class="fi-rr-book-alt"></i>
+                    </div>
+                    <h2>کتاب درمانی</h2>
+                    <button type="button" class="btn-close-sidebar"><i class="fr-rr-cross-small"></i></button>
+                </div>
+                <ul class="list-nav">
+                    <!-- پیشخوان -->
+                    <li class="nav-item">
+                        <a class="sub-item" href="index.html">
+                            <span class="icon"><i class="fi-rr-dashboard"></i></span>
+                            <span class="title">پیشخوان</span>
+                        </a>
+                    </li>
+                    <!-- سفارشات -->
+                    <li class="nav-item">
+                        <a class="sub-item" href="orders-list.html">
+                            <span class="icon"><i class="fi-rr-shopping-cart"></i></span>
+                            <span class="title">سفارشات</span>
+                        </a>
+                    </li>
+                    <!-- دسته‌بندی ها -->
+                    <li class="nav-item">
+                        <a class="sub-item" href="category.html">
+                            <span class="icon"><i class="fi-rr-apps-add"></i></span>
+                            <span class="title">دسته‌بندی ها</span>
+                        </a>
+                    </li>
+                    <!-- کتاب‌ها -->
+                    <li class="nav-item">
+                        <a class="sub-item" href="bookslist-paper.html">
+                            <span class="icon"><i class="fi-rr-book"></i></span>
+                            <span class="title">کتاب‌ها</span>
+                        </a>
+                    </li>
+                    <!-- بلاگ -->
+                    <li class="nav-item active">
+                        <a class="sub-item" href="blogs-list.html">
+                            <span class="icon"><i class="fi-rr-document"></i></span>
+                            <span class="title">بلاگ</span>
+                        </a>
+                    </li>
+                    <!-- لیست کاربران -->
+                    <li class="nav-item">
+                        <a class="sub-item" href="usersList.html">
+                            <span class="icon"><i class="fi-rr-portrait"></i></span>
+                            <span class="title">لیست کاربران</span>
+                        </a>
+                    </li>
+                    <!-- کوپن‌های تخفیف -->
+                    <li class="nav-item">
+                        <a class="sub-item" href="coupon-list.html">
+                            <span class="icon"><i class="fi-rr-earnings"></i></span>
+                            <span class="title">کوپن‌های تخفیف</span>
+                        </a>
+                    </li>
+                    <!--بنرها-->
+                    <li class="nav-item">
+                        <a class="sub-item" href="promotion-baners.html">
+                            <span class="icon"><i class="fi-rr-earnings"></i></span>
+                            <span class="title">بنرها</span>
+                        </a>
+                    </li>
+                    <!-- دیدگاه کاربران -->
+                    <li class="nav-item">
+                        <a class="sub-item" href="comments.html">
+                            <span class="icon"><i class="fi-rr-comment-alt"></i></span>
+                            <span class="title">دیدگاه کاربران</span>
+                        </a>
+                    </li>
+                    <!-- پیام‌ها -->
+                    <li class="nav-item">
+                        <a class="sub-item" href="messages.html">
+                            <span class="icon"><i class="fi-rr-envelope"></i></span>
+                            <span class="title">پیام‌ها</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="sidebar-overlay"></div>
+            <!--Body Content-->
+            <div id="mainDash" class="main-body-content">
+                <div class="main-header">
+                    <div class="inner">
+                        <div class="page-back">
+                            <a href="orders-list.html">
+                                <i class="fi fi-rr-arrow-right"></i>
+                            </a>
+                        </div>
+                        <div class="title">
+                            <h1>کتاب جدید</h1>
+                        </div>
+                        <div class="controller">
+                            <a href="#" class="btn btn-primary icon-right">
+                                <i class="fi fi-rr-eye"></i>
+                                نمایش کتاب
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="main-inner">
+                    <!-- اطلاعات کتاب -->
+                    <div class="form-row">
+                        <div class="form-title">
+                            <div class="icon"><i class="fi fi-rr-pencil"></i></div>
+                            <h5>اطلاعات کتاب</h5>
+                        </div>
+                        <div class="form-inner">
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6">
+                                    <div class="inputgroup nopadding">
+                                        <label>عنوان کتاب</label>
+                                        <input type="text" class="input" placeholder="" required>
+                                        <span class="alert">عنوان کتاب را وارد کنید</span>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 col-md-6">
+                                    <div class="inputgroup nopadding">
+                                        <label>موجودی</label>
+                                        <input type="text" class="input" placeholder="" required>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 col-md-6">
+                                    <div class="select-group">
+                                        <label>نوع کتاب</label>
+                                        <select class="form-select">
+                                            <option value="0" selected>چاپی</option>
+                                            <option value="1">صوتی</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 col-md-6">
+                                    <div class="inputgroup nopadding">
+                                        <label>تعداد صفحات</label>
+                                        <input type="number" class="input" placeholder="">
+                                        <span class="alert"></span>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-6">
+                                    <div class="inputgroup nopadding">
+                                        <label>مترجم</label>
+                                        <input type="text" class="input" placeholder="">
+                                        <span class="alert"></span>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-6">
+                                    <div class="inputgroup nopadding">
+                                        <label>شابک</label>
+                                        <input type="text" class="input" placeholder="">
+                                        <span class="alert"></span>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-6">
+                                    <div class="inputgroup nopadding">
+                                        <label>تاریخ آخرین ویرایش</label>
+                                        <input type="text" class="input date-picker" placeholder="" disabled>
+                                        <span class="alert"></span>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-6">
+                                    <div class="form-check form-switch margin-top">
+                                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked"
+                                            checked>
+                                        <label class="form-check-label" for="flexSwitchCheckChecked">نمایش
+                                            محصول</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- مرتب سازی -->
+                    <div class="form-row">
+                        <div class="form-title">
+                            <div class="icon"><i class="fi fi-rr-apps-sort"></i></div>
+                            <h5>مرتب سازی</h5>
+                        </div>
+                        <div class="form-inner">
+                            <div class="row">
+                                <div class="col-lg-2 col-md-3">
+                                    <div class="inputgroup nopadding">
+                                        <label>اولویت</label>
+                                        <input type="text" class="input" placeholder="" required>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 col-md-3">
+                                    <div class="inputgroup nopadding">
+                                        <label>جدیدترین</label>
+                                        <input type="text" class="input" placeholder="" required>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 col-md-3">
+                                    <div class="inputgroup nopadding">
+                                        <label>به وقت خواندن</label>
+                                        <input type="text" class="input" placeholder="" required>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 col-md-3">
+                                    <div class="inputgroup nopadding">
+                                        <label>پرفروش ترین</label>
+                                        <input type="text" class="input" placeholder="" required>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- نویسنده -->
+                    <div class="form-row">
+                        <div class="form-title">
+                            <div class="icon"><i class="fi fi-rr-user"></i></div>
+                            <h5>نویسنده</h5>
+                        </div>
+                        <div class="form-inner">
+                            <div class="row">
+                                <div class="col-lg-2 col-md-3">
+                                    <div class="inputgroup nopadding">
+                                        <label>شناسه</label>
+                                        <input type="text" class="input" placeholder="" required>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-3">
+                                    <div class="inputgroup nopadding">
+                                        <label>نام نویسنده</label>
+                                        <input type="text" class="input" placeholder="" required>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6 col-md-3">
+                                    <div class="buttons-group">
+                                        <button type="button" class="btn-link">
+                                            <i class="fi fi-rr-add"></i>
+                                            لیست نویسندگان
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- دسته بندی -->
+                    <div class="form-row">
+                        <div class="form-title">
+                            <div class="icon"><i class="fi fi-rr-apps"></i></div>
+                            <h5>دسته بندی</h5>
+                        </div>
+                        <div class="form-inner mb-5">
+                            <div class="row">
+                                <div class="col-lg-6 col-md-12">
+                                    <div class="multiple-select-content">
+                                        <label>انتخاب دسته بندی</label>
+                                        <select class="multiple-select-js" name="states[]" multiple="multiple">
+                                            <option value="AL">Tillie Griffith</option>
+                                            <option value="WY">Jorge McGuireWyoming</option>
+                                            <option value="WY">Stephen GriffithWyoming</option>
+                                            <option value="WY">Lelia OrtizWyoming</option>
+                                            <option value="WY">Sophia AustinWyoming</option>
+                                            <option value="WY">Oscar FloydWyoming</option>
+                                            <option value="WY">Manuel CarrWyoming</option>
+                                            <option value="WY">Johanna LoweWyoming</option>
+                                            <option value="WY">Danny ColonWyoming</option>
+                                            <option value="WY">Pauline HansonWyoming</option>
+                                            <option value="WY">Josephine MarshallWyoming</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- انتشارات -->
+                    <div class="form-row">
+                        <div class="form-title">
+                            <div class="icon"><i class="fi fi-rr-book-alt"></i></div>
+                            <h5>انتشارات</h5>
+                        </div>
+                        <div class="form-inner">
+                            <div class="row">
+                                <div class="col-lg-2 col-md-3">
+                                    <div class="inputgroup nopadding">
+                                        <label>شناسه</label>
+                                        <input type="text" class="input" placeholder="" required>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-3">
+                                    <div class="inputgroup nopadding">
+                                        <label>نام انتشارات</label>
+                                        <input type="text" class="input" placeholder="" required>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-3">
+                                    <div class="inputgroup nopadding">
+                                        <label>تاریخ انتشار</label>
+                                        <input type="text" class="input" placeholder="" required>
+                                    </div>
+                                </div>
+                                <div class="col-lg-3 col-md-3">
+                                    <div class="buttons-group">
+                                        <button type="button" class="btn-link">
+                                            <i class="fi fi-rr-add"></i>
+                                            لیست انتشارات
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- قیمت -->
+                    <div class="form-row">
+                        <div class="form-title">
+                            <div class="icon"><i class="fi fi-rr-earnings"></i></div>
+                            <h5>قیمت</h5>
+                        </div>
+                        <div class="form-inner">
+                            <div class="row">
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="inputgroup nopadding">
+                                        <label>قیمت پایه (ریال)</label>
+                                        <input type="text" class="input" placeholder="" required>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6">
+                                    <div class="inputgroup nopadding">
+                                        <label>قیمت فروش (ریال)</label>
+                                        <input type="text" class="input" placeholder="" required>
+                                    </div>
+                                </div>
+                                <!-- <div class="col-lg-4 col-md-6">
+                                    <div class="input-group-drop">
+                                        <label>تخفیف</label>
+                                        <div class="group-inner">
+                                            <select class="form-select">
+                                                <option selected>درصد</option>
+                                                <option value="1">تومان</option>
+                                            </select>
+                                            <input type="text" class="input" placeholder="مقدار تخفیف" value="0">
+                                        </div>
+                                    </div>
+                                </div> -->
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- توضیحات -->
+                    <div class="form-row">
+                        <div class="form-title">
+                            <div class="icon"><i class="fi fi-rr-align-center"></i></div>
+                            <h5>توضیحات</h5>
+                        </div>
+                        <div class="form-inner">
+                            <div class="textarea-group">
+                                <textarea name="textarea" class="textarea" cols="30" rows="4"
+                                    placeholder="توضیحات راجع به کتاب"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- بارگذاری عکس -->
+                    <div class="form-row">
+                        <div class="form-title">
+                            <div class="icon"><i class="fi fi-rr-picture"></i></div>
+                            <h5>بارگذاری عکس</h5>
+                        </div>
+                        <div class="form-inner">
+                            <div class="box-upload-file">
+                                <div class="box-upload">
+                                    <div class="image-uploader">
+                                        <input type="file" name="bookcover-upload" id="bookcover-upload" />
+                                    </div>
+                                </div>
+                                <div class="box-tips">
+                                    <ul class="upload-pic-help">
+                                        <li>عکس باگذاری کمتر از <strong>500</strong> کیلوبایت باشد.</li>
+                                        <li>عکس با پسوندهای <strong>PNG, JPEG, JPG</strong> مجاز می باشد.</li>
+                                        <li>ابعاد عکس به صورت مستطیل باشد <strong>(600x880 - 300x440)</strong></li>
+                                        <li>حداکثر تعداد بارگذاری عکس <strong>1</strong> عدد می باشد.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="forms-buttons-group">
+                        <button type="button" class="btn btn-primary icon-right"><i class="fi fi-rr-check"></i>ثبت
+                            کتاب</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Exit -->
+        <div class="modal fade" id="modal-exit" tabindex="-1" aria-labelledby="modal-exit-title" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modal-exit-title"><i class="fi fi-rr-sign-out"></i>خروج</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <h6 class="msg">از حساب کاربری خود خارج می شوید؟</h6>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary-glass icon-right"><i
+                                class="fi fi-rr-cross"></i>خیر</button>
+                        <button type="button" class="btn btn-primary icon-right"><i
+                                class="fi fi-rr-check"></i>بلی</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scripts -->
+        <script src="../js/jquery-3.3.1.min.js"></script>
+        <script src="../js/bootstrap.bundle.min.js"></script>
+        <script src="../js/scripts-dashboard.js"></script>
+        <script src="../plugin/persian-calender/persian-date.min.js"></script>
+        <script src="../plugin/persian-calender/persian-datepicker.min.js"></script>
+        <script src="../plugin/persian-calender/persian-datepicker-initial.js"></script>
+        <script src="../plugin/ssi-uploader/ssi-uploader.js"></script>
+        <script src="../plugin/ssi-uploader/ssi-uploader-initial.js"></script>
+        <script src="../plugin/select2/select2.min.js"></script>
+        <script src="../plugin/select2/select2.initial.js"></script>
+
+</body>
+
+</html>

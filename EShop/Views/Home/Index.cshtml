@@ -1,0 +1,20 @@
+﻿
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Index</h1>
+<button class="btn btn-primary" id="alert"> alert</button>
+<a class="btn btn-success"  href="Account/Rigester"> ثبت نام </a>
+<a class="btn btn-success"  href="Account/Rigester2"> ثبت نام2 </a>
+
+@section Scripts{
+    <script>
+        $(document).ready(function(){
+        $("#alert").click(function(){
+            alert("Hellooo");
+        });
+        });
+    </script>
+}

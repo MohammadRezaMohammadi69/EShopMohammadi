@@ -1,0 +1,113 @@
+/*#region ----------------- Buttons */
+.btn {
+    font-size: 14px;
+    font-weight: 400;
+    border: 1px solid transparent;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    .fi {
+        font-size: 16px;
+        position: relative;
+        top: 4px;
+    }
+    &:focus {
+        box-shadow: none !important;
+    }
+}
+.icon-left {
+    .fi {
+        margin-right: 8px;
+    }
+}
+.icon-right {
+    .fi {
+        margin-left: 8px;
+    }
+}
+.btn-primary {
+    background-color: $primary;
+    border-radius: 8px;
+    border-color: transparent;
+}
+.btn-primary-outline {
+    background-color: transparent;
+    color: $primary;
+    border-color: $primary;
+    &:hover {
+        color: darken($color: $primary, $amount: 10);
+        background-color: $background;
+    }
+}
+.btn-primary-glass {
+    background-color: transparent;
+    color: $textGrey;
+    &:hover {
+        color: darken($color: $primary, $amount: 10);
+        background-color: $background;
+    }
+}
+.btn-danger {
+    background-color: $red;
+    color: white;
+}
+.btn-delete {
+    background-color: $red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    width: 24px;
+    height: 24px;
+    padding: 2px;
+    font-size: 16px;
+    .fi {
+        line-height: 0 !important;
+        position: relative;
+        top: 2px;
+    }
+}
+.btn-accent {
+    background-color: $accent;
+    color: white;
+    &:hover {
+        background-color: darken($color: $accent, $amount: 10);
+        color: white;
+    }
+}
+.btn-footer {
+    background-color: transparent;
+    padding: 3px 8px;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 500;
+    border: 1px solid transparent;
+    margin-right: 10px;
+    display: inline-block;
+    &:first-child {
+        margin-right: 0;
+    }
+    &.primary {
+        color: $primary;
+        border-color: $primary;
+    }
+    &.red {
+        color: $red;
+        border-color: $red;
+    }
+    .fi {
+        margin-left: 5px;
+        font-size: 16px;
+        position: relative;
+        top: 3px;
+    }
+    &:hover {
+        &.primary {
+            background-color: $primary;
+            color: white;
+        }
+        &.red {
+            background-color: $red;
+            color: white;
+        }
+    }
+}
+/*#endregion -------------- Buttons */

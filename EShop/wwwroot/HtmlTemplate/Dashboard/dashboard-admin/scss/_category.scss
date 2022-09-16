@@ -1,0 +1,136 @@
+/*#region ----------------- Category Grid Layout */
+.category-grid-layout {
+    .category-forms {
+        background-color: $backgroundLight;
+        padding: 20px;
+        border-radius: 10px;
+        border: 1px solid $borderColor;
+        .inputgroup {
+            margin-bottom: 1.2rem;
+        }
+        .textarea-group {
+            margin-bottom: 1.2rem;
+        }
+        .button-group {
+            .btn {
+                width: 100%;
+                margin-top: 1rem;
+            }
+        }
+    }
+}
+.category-menu-list {
+    .collapse-menu-item {
+        .collapse-header {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            background-color: $background;
+            padding: 1px 8px;
+            height: 42px;
+            border: 1px solid $borderColor;
+            border-radius: 5px;
+            .icon {
+                width: 30px;
+                height: 30px;
+                color: $primary;
+                transform: rotate(0deg);
+                background-color: white;
+                margin-left: 30px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 5px;
+                &.collapsed {
+                    transform: rotate(90deg);
+                }
+            }
+            .number {
+                min-width: 50px;
+                font-size: 14px;
+                font-weight: 600;
+                text-align: right;
+            }
+            .name {
+                font-size: 13px;
+                font-weight: 500;
+                color: $textDark;
+            }
+        }
+        .buttons-group-edit {
+            margin-right: auto;
+            .btn-edit {
+                padding: 2px 5px;
+                width: 28px;
+                height: 28px;
+                background-color: transparent;
+                border: none;
+                border-radius: 0;
+                font-size: 16px;
+                .fi {
+                    position: relative;
+                    top: 3px;
+                }
+                &.trash {
+                    color: $red;
+                }
+                &.edit {
+                    color: $textGrey;
+                }
+                &:hover {
+                    &.trash {
+                        background-color: rgba($color: $red, $alpha: 0.1);
+                        border-radius: 20px;
+                    }
+                    &.edit {
+                        background-color: rgba($color: $textGrey, $alpha: 0.1);
+                        border-radius: 20px;
+                    }
+                }
+            }
+        }
+        .card {
+            background-color: transparent;
+            border: none;
+            ul {
+                margin-top: 10px;
+                padding-right: 60px;
+                li {
+                    background-color: $background;
+                    padding: 10px 15px 10px 8px;
+                    border: 1px solid $borderColor;
+                    border-radius: 5px;
+                    margin-bottom: 10px;
+                    font-size: 13px;
+                    font-weight: 400;
+                    color: $textDark;
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-start;
+                    .number {
+                        min-width: 60px;
+                        font-size: 14px;
+                        font-weight: 600;
+                        text-align: right;
+                        display: inline-block;
+                    }
+                }
+            }
+        }
+        // .btn {
+        //     width: 100%;
+        //     text-align: right;
+        //     display: flex;
+        //     .icon {
+        //         width: 30px;
+        //         height: 20px;
+        //         text-align: right;
+        //         .fi {
+        //             margin: 0;
+        //         }
+        //     }
+        // }
+    }
+}
+
+/*#endregion -------------- Category Grid Layout */

@@ -1,0 +1,158 @@
+﻿@model ViewModel.EditeUserVM
+
+@{
+	ViewData["Title"] = "Edit";
+
+	Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+@section Styles{
+ 
+	<link href="~/HtmlTemplate/Dashboard/plugin/select2/select2.min.css" rel="stylesheet"  />
+}
+<div class="container-fluid">
+	@if (TempData["message"] != null)
+	{
+		var eror = await Utilities.JSON.ToObjet<ViewModel.ErorVM>(TempData["message"].ToString());
+		<div class="container">
+			<div class="col-6 mx-auto alert alert-@eror.AlertClass text-center text-secondary" id="eror" role="alert">
+				@eror.Message
+			</div>
+		</div>
+	}
+	<div id="mainDash" class="main-body-content">
+		<div class="main-header">
+			<div class="inner">
+				<div class="page-back">
+					<a asp-action="index">
+						<i class="fi fi-rr-arrow-right"></i>
+					</a>
+				</div>
+				<div class="title">
+					<h1>ویرایش کاربر</h1>
+				</div>
+
+			</div>
+		</div>
+		@using (Html.BeginForm("UpdateUser", "User", new { area = "Admin" }, FormMethod.Post))
+		{
+			@Html.AntiForgeryToken()
+;
+			<div class="main-inner">
+				<div class="form-row">
+					<div class="row">
+						<input type="hidden" asp-for="Users.UserId" />
+						<input type="hidden" asp-for="Users.UserName" />
+						<div class="col-lg-4 col-md-6 ">
+							<div class="inputgroup nopadding">
+								<label>نام و نام خانوادگی </label>
+								<input asp-for="Users.Name" type="text" class="input mb-2" />
+								<span asp-validation-for="Users.Name" class="text-danger p-4 "></span>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-6 mb-3">
+							<div class="inputgroup nopadding">
+								<label> ایمیل </label>
+								<input asp-for="Users.Email" type="email" class="input mb-2" />
+								<span asp-validation-for="Users.Email" class="text-danger p-4 "></span>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-6 mb-3">
+							<div class="inputgroup nopadding">
+								<label>رمز عبور</label>
+							   <input asp-for="Users.Password" type="text" class="input mb-2" />
+							   <span asp-validation-for="Users.Password" class="text-danger p-4 "></span>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-6 mb-3">
+							<div class="inputgroup nopadding">
+								<label> تکرار رمز عبور</label>
+							   <input asp-for="Users.ConfrimePassword" type="text" class="input mb-2" />
+							   <span asp-validation-for="Users.ConfrimePassword" class="text-danger p-4 "></span>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-6 mb-3">
+							<div class="inputgroup nopadding">
+								<label>سن</label>
+							   <input asp-for="Users.Age" type="number" class="input mb-2" />
+							   <span asp-validation-for="Users.Age" class="text-danger p-4 "></span>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-6 mb-3">
+							<div class="inputgroup nopadding">
+								<label>کد پستی</label>
+							   <input asp-for="Users.CodePosti" type="number" class="input mb-2" />
+							   <span asp-validation-for="Users.CodePosti" class="text-danger p-4 "></span>
+							</div>
+						</div>
+						<div class="col-lg-4 col-md-6 mb-3">
+						<div class="select-group">
+                                    <label>جنسیت</label>
+                              	<select data-placeholder="لیست نقش های کاربر" multiple="multiple" class="select2 form-select" name="UserRoleId">
+											@if (ViewBag.AllRoles != null)
+											{
+												@foreach (var item in ViewBag.AllRoles)
+												{
+													if (Model.Users.UserRole == null)
+													{
+														<option value="@item.RoleId"> @item.RoleName</option>
+													}
+													EShop.Models.UserRole? userrole = Model.Users.UserRole.Where(x => x.RoleId == item.RoleId).FirstOrDefault();
+													if (userrole != null)
+													{
+														<option selected value="@item.RoleId"> @item.RoleName</option>
+													}
+													else
+													{
+														<option value="@item.RoleId"> @item.RoleName</option>
+													}
+												}
+											}
+										</select>
+                                </div>
+						</div>
+						<div class="col-lg-4 col-md-6 mb-3">
+							<label>آدرس</label>
+							<div class="textarea-group mt-1">
+                                  <textarea  asp-for="Users.Address" type="text" class=" textarea mb-2" placeholder="توضیحات" required="" style="height:44px;" ></textarea>
+                            </div>
+							 <span asp-validation-for="Users.Address" class="text-danger p-4 "></span>
+						</div>
+						<div class="col-lg-4  mb-3">
+							<div class="form-check form-switch margin-top">
+								<input class="form-check-input" type="checkbox" asp-for="Users.Active" id="flexSwitchCheckChecked" >
+								<label class="form-check-label" for="flexSwitchCheckChecked">
+									فعال / غیر فعال
+								</label>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-12 mt-4">
+						<div class="forms-buttons-group">
+							<button type="submit" class="btn btn-primary icon-right">
+								<i class="fi fi-rr-check"></i>ثبت
+								تغییرات
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		}
+	</div>
+</div>
+ 
+ 
+
+
+@section Scripts
+{
+ 
+<script src="~/HtmlTemplate/Dashboard/plugin/select2/select2.min.js"></script>
+<script>
+$(document).ready(function () {
+    $('.select2').select2();
+	$('span.select2-selection').addClass("form-select");
+});
+</script>
+
+}

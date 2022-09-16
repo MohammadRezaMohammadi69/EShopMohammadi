@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="fa" class="no-js" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#2690ba" />
+    <meta name="msapplication-navbutton-color" content="#2690ba">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#2690ba">
+    <title>کتاب درمانی ‍| صفحه اصلی</title>
+    <link rel="stylesheet" href="../css/bootstrap.rtl.min.css">
+    <link rel="stylesheet" href="scss/main.css">
+    <link rel="stylesheet" href="../plugin/swiperjs/swiper-bundle.css">
+    <link rel="stylesheet" href="../plugin/persian-calender/persian-datepicker.css">
+
+    <!-- Font Icons -->
+    <link href="../css/uicons-regular-rounded.css" media="all" rel="stylesheet" type="text/css">
+    <link href="../css/uicons-solid-rounded.css" media="all" rel="stylesheet" type="text/css">
+
+    <!-- Favicon -->
+    <!-- <link rel="icon" href="images/small-icon.png">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/logo-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/logo-114x114.png"> -->
+
+</head>
+
+<body>
+
+    <!-- Wrapper -->
+    <div class="wrapper">
+        <!-- Navbar -->
+        <nav id="navbarDash">
+            <div class="collapse-sidebar">
+                <button type="button" id="sidebarCollapse" class="btn btn-side">
+                    <span class="menu-lines">
+                        <span class="line line-1"></span>
+                        <span class="line line-2"></span>
+                        <span class="line line-3"></span>
+                    </span>
+                </button>
+            </div>
+            <div class="user-menu-content">
+                <!-- user Menu -->
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        کاربر ادمین
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#" target="_blank"><i class="fi-rr-computer"></i>صفحه اصلی
+                                سایت</a></li>
+                        <li><a class="dropdown-item" href="lock-panel.html"><i class="fi-rr-lock"></i>قفل پنل مدیریت</a>
+                        </li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="#" data-bs-toggle="modal" data-bs-target="#modal-exit"><i
+                                    class="fi-rr-sign-out"></i>خروج</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!--Page Content-->
+        <div id="contentDash">
+            <!--Sidebar-->
+            <nav id="sidebarDash">
+                <div class="sidebar-header">
+                    <div class="icon">
+                        <i class="fi-rr-book-alt"></i>
+                    </div>
+                    <h2>کتاب درمانی</h2>
+                    <button type="button" class="btn-close-sidebar"><i class="fr-rr-cross-small"></i></button>
+                </div>
+                <ul class="list-nav">
+                    <!-- پیشخوان -->
+                    <li class="nav-item">
+                        <a class="sub-item" href="index.html">
+                            <span class="icon"><i class="fi-rr-dashboard"></i></span>
+                            <span class="title">پیشخوان</span>
+                        </a>
+                    </li>
+                    <!-- سفارشات -->
+                    <li class="nav-item">
+                        <a class="sub-item" href="orders-list.html">
+                            <span class="icon"><i class="fi-rr-shopping-cart"></i></span>
+                            <span class="title">سفارشات</span>
+                        </a>
+                    </li>
+                    <!-- دسته‌بندی ها -->
+                    <li class="nav-item">
+                        <a class="sub-item" href="category.html">
+                            <span class="icon"><i class="fi-rr-apps-add"></i></span>
+                            <span class="title">دسته‌بندی ها</span>
+                        </a>
+                    </li>
+                    <!-- کتاب‌ها -->
+                    <li class="nav-item">
+                        <a class="sub-item" href="bookslist-paper.html">
+                            <span class="icon"><i class="fi-rr-book"></i></span>
+                            <span class="title">کتاب‌ها</span>
+                        </a>
+                    </li>
+                    <!-- بلاگ -->
+                    <li class="nav-item active">
+                        <a class="sub-item" href="blogs-list.html">
+                            <span class="icon"><i class="fi-rr-document"></i></span>
+                            <span class="title">بلاگ</span>
+                        </a>
+                    </li>
+                    <!-- لیست کاربران -->
+                    <li class="nav-item">
+                        <a class="sub-item" href="usersList.html">
+                            <span class="icon"><i class="fi-rr-portrait"></i></span>
+                            <span class="title">لیست کاربران</span>
+                        </a>
+                    </li>
+                    <!-- کوپن‌های تخفیف -->
+                    <li class="nav-item">
+                        <a class="sub-item" href="coupon-list.html">
+                            <span class="icon"><i class="fi-rr-earnings"></i></span>
+                            <span class="title">کوپن‌های تخفیف</span>
+                        </a>
+                    </li>
+                    <!--بنرها-->
+                    <li class="nav-item">
+                        <a class="sub-item" href="promotion-baners.html">
+                            <span class="icon"><i class="fi-rr-earnings"></i></span>
+                            <span class="title">بنرها</span>
+                        </a>
+                    </li>
+                    <!-- دیدگاه کاربران -->
+                    <li class="nav-item">
+                        <a class="sub-item" href="comments.html">
+                            <span class="icon"><i class="fi-rr-comment-alt"></i></span>
+                            <span class="title">دیدگاه کاربران</span>
+                        </a>
+                    </li>
+                    <!-- پیام‌ها -->
+                    <li class="nav-item">
+                        <a class="sub-item" href="messages.html">
+                            <span class="icon"><i class="fi-rr-envelope"></i></span>
+                            <span class="title">پیام‌ها</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="sidebar-overlay"></div>
+            <!--Body Content-->
+            <div id="mainDash" class="main-body-content">
+                <div class="main-header">
+                    <div class="inner">
+                        <div class="title">
+                            <i class="fi-rr-shopping-cart"></i>
+                            <h1>سفارشات</h1>
+                        </div>
+                        <div class="controller">
+                            <button type="button" class="btn btn-primary-outline btn-show-filter icon-right"
+                                data-bs-toggle="modal" data-bs-target="#modal-add-category"><i
+                                    class="fi fi-rr-settings-sliders"></i>جستجو و
+                                فیلتر</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="main-inner">
+                    <div class="search-content">
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-12">
+                                    <div class="inputgroup nopadding">
+                                        <input type="text" class="input" placeholder="جستجو">
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 col-md-6 col-sm-6 col-12">
+                                    <div class="select-group">
+                                        <select class="form-select">
+                                            <option selected>همه محصولات</option>
+                                            <option value="1">فقط فعال</option>
+                                            <option value="2">فقط غیرفعال</option>
+                                            <option value="3">اتمام موجودی</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 col-md-6 col-sm-6 col-12">
+                                    <button type="button" class="btn btn-accent icon-right"><i
+                                            class="fi fi-rr-search"></i>اعمال فیلتر</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tabs-dashboards">
+                        <nav>
+                            <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
+                                <button class="nav-link active" id="nav-allOrders-tab" data-bs-toggle="tab"
+                                    data-bs-target="#nav-allOrders" type="button" role="tab"
+                                    aria-controls="nav-allOrders" aria-selected="true">
+                                    <span class="icon"><i class="fi-rr-shopping-cart-add"></i></span>
+                                    <span class="tab-name">همه سفارشات</span>
+                                    <span class="badge">15</span>
+                                </button>
+                                <button class="nav-link" id="nav-awaiting-tab" data-bs-toggle="tab"
+                                    data-bs-target="#nav-awaiting" type="button" role="tab" aria-controls="nav-awaiting"
+                                    aria-selected="false">
+                                    <span class="icon"><i class="fi-rr-hourglass-end"></i></span>
+                                    <span class="tab-name">در انتظار بررسی</span>
+                                    <span class="badge">2</span>
+                                </button>
+                                <button class="nav-link" id="nav-waitingSend-tab" data-bs-toggle="tab"
+                                    data-bs-target="#nav-waitingSend" type="button" role="tab"
+                                    aria-controls="nav-waitingSend" aria-selected="false">
+                                    <span class="icon"><i class="fi-rr-time-fast"></i></span>
+                                    <span class="tab-name">منتظر ارسال</span>
+                                    <span class="badge">1</span>
+                                </button>
+                                <button class="nav-link" id="nav-sending-tab" data-bs-toggle="tab"
+                                    data-bs-target="#nav-sending" type="button" role="tab" aria-controls="nav-sending"
+                                    aria-selected="true">
+                                    <span class="icon"><i class="fi-rr-time-check"></i></span>
+                                    <span class="tab-name">ارسال شده</span>
+                                    <span class="badge">4</span>
+                                </button>
+                                <button class="nav-link" id="nav-delivered-tab" data-bs-toggle="tab"
+                                    data-bs-target="#nav-delivered" type="button" role="tab"
+                                    aria-controls="nav-delivered" aria-selected="false">
+                                    <span class="icon"><i class="fi-rr-box"></i></span>
+                                    <span class="tab-name">تحویل شده</span>
+                                    <span class="badge">30</span>
+                                </button>
+                                <button class="nav-link" id="nav-completed-tab" data-bs-toggle="tab"
+                                    data-bs-target="#nav-completed" type="button" role="tab"
+                                    aria-controls="nav-completed" aria-selected="false">
+                                    <span class="icon"><i class="fi-rr-shopping-cart-check"></i></span>
+                                    <span class="tab-name">تکمیل شده</span>
+                                    <span class="badge">65</span>
+                                </button>
+                                <button class="nav-link" id="nav-returned-tab" data-bs-toggle="tab"
+                                    data-bs-target="#nav-returned" type="button" role="tab" aria-controls="nav-returned"
+                                    aria-selected="false">
+                                    <span class="icon"><i class="fi-rr-cross-circle"></i></span>
+                                    <span class="tab-name">مرجوعی</span>
+                                    <span class="badge">6</span>
+                                </button>
+                            </div>
+                        </nav>
+                        <div class="tab-content" id="nav-tabContent">
+                            <div class="tab-pane fade show active" id="nav-allOrders" role="tabpanel"
+                                aria-labelledby="nav-allOrders-tab">
+                                <div class="cards-list">
+                                    <div class="card-order">
+                                        <div class="card-inner">
+                                            <ul class="list">
+                                                <li><span class="name">شماره سفارش : </span><span
+                                                        class="desc">KD-648975</span>
+                                                </li>
+                                                <li><span class="name">تاریخ سفارش : </span><span
+                                                        class="desc">1401/12/21 - 14:30</span>
+                                                </li>
+                                                <li><span class="name">خریدار : </span><span class="desc">دلآرا
+                                                        نظری</span></li>
+                                                <li><span class="name">موبایل : </span><span
+                                                        class="desc">09198886523</span></li>
+                                                <li><span class="name">مبلغ پرداختی : </span><span class="desc">120,000‌
+                                                        تومان</span>
+                                                </li>
+                                                <li><span class="name">وضعیت پرداخت : </span><span
+                                                        class="desc">آنلاین</span>
+                                                </li>
+                                            </ul>
+                                            <ul class="address-list">
+                                                <li>
+                                                    <span class="name">آدرس : </span>
+                                                    <span class="desc">تهران - پاسداران میدان هروی خیابان مکران جنوبی
+                                                        خیابان توحیدی پلاک ۷۱واحد ۴ شاهبداغ</span>
+                                                </li>
+                                                <li>
+                                                    <span class="name">کدپستی: </span>
+                                                    <span class="desc">3431665452</span>
+                                                </li>
+                                            </ul>
+                                            <div class="card-footer">
+                                                <div class="status">
+                                                    <span class="title">وضعیت سفارش : </span>
+                                                    <span class="desc order-new">جدید</span>
+                                                </div>
+                                                <div class="buttons-group">
+                                                    <a href="order-details.html"
+                                                        class="btn btn-primary icon-left">جزییات سفارش
+                                                        <i class="fi fi-rr-arrow-left"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-order">
+                                        <div class="card-inner">
+                                            <ul class="list">
+                                                <li><span class="name">شماره سفارش : </span><span
+                                                        class="desc">KD-648975</span>
+                                                </li>
+                                                <li><span class="name">تاریخ سفارش : </span><span
+                                                        class="desc">1401/12/21 - 14:30</span>
+                                                </li>
+                                                <li><span class="name">خریدار : </span><span class="desc">دلآرا
+                                                        نظری</span></li>
+                                                <li><span class="name">موبایل : </span><span
+                                                        class="desc">09198886523</span></li>
+                                                <li><span class="name">مبلغ پرداختی : </span><span class="desc">120,000‌
+                                                        تومان</span>
+                                                </li>
+                                                <li><span class="name">وضعیت پرداخت : </span><span
+                                                        class="desc">آنلاین</span>
+                                                </li>
+                                            </ul>
+                                            <ul class="address-list">
+                                                <li>
+                                                    <span class="name">آدرس : </span>
+                                                    <span class="desc">تهران - پاسداران میدان هروی خیابان مکران جنوبی
+                                                        خیابان توحیدی پلاک ۷۱واحد ۴ شاهباغ</span>
+                                                </li>
+                                                <li>
+                                                    <span class="name">کدپستی: </span>
+                                                    <span class="desc">3431665452</span>
+                                                </li>
+                                            </ul>
+                                            <div class="card-footer">
+                                                <div class="status">
+                                                    <span class="title">وضعیت سفارش : </span>
+                                                    <span class="desc order-waiting">در حال ارسال</span>
+                                                </div>
+                                                <div class="buttons-group">
+                                                    <a href="order-details.html"
+                                                        class="btn btn-primary icon-left">جزییات سفارش
+                                                        <i class="fi fi-rr-arrow-left"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-order">
+                                        <div class="card-inner">
+                                            <ul class="list">
+                                                <li><span class="name">شماره سفارش : </span><span
+                                                        class="desc">KD-648975</span>
+                                                </li>
+                                                <li><span class="name">تاریخ سفارش : </span><span
+                                                        class="desc">1401/12/21 - 14:30</span>
+                                                </li>
+                                                <li><span class="name">خریدار : </span><span class="desc">دلآرا
+                                                        نظری</span></li>
+                                                <li><span class="name">موبایل : </span><span
+                                                        class="desc">09198886523</span></li>
+                                                <li><span class="name">مبلغ پرداختی : </span><span class="desc">120,000‌
+                                                        تومان</span>
+                                                </li>
+                                                <li><span class="name">وضعیت پرداخت : </span><span
+                                                        class="desc">آنلاین</span>
+                                                </li>
+                                            </ul>
+                                            <ul class="address-list">
+                                                <li>
+                                                    <span class="name">آدرس : </span>
+                                                    <span class="desc">تهران - پاسداران میدان هروی خیابان مکران جنوبی
+                                                        خیابان توحیدی پلاک ۷۱واحد ۴ شاهباغ</span>
+                                                </li>
+                                                <li>
+                                                    <span class="name">کدپستی: </span>
+                                                    <span class="desc">3431665452</span>
+                                                </li>
+                                            </ul>
+                                            <div class="card-footer">
+                                                <div class="status">
+                                                    <span class="title">وضعیت سفارش : </span>
+                                                    <span class="desc order-completed">تحویل داده شد</span>
+                                                </div>
+                                                <div class="buttons-group">
+                                                    <a href="order-details.html"
+                                                        class="btn btn-primary icon-left">جزییات سفارش
+                                                        <i class="fi fi-rr-arrow-left"></i></a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- Pagination -->
+                                    <div class="mypagination br-top">
+                                        <div class="pagination-prev">
+                                            <a href="#" class="btn-pagination prev disabled"><i
+                                                    class="fi fi-rr-arrow-right"></i>صفحه
+                                                قبلی</a>
+                                        </div>
+                                        <div class="pagination-info">
+                                            <span>صفحه</span>
+                                            <div class="pagination-jump">
+                                                <input class="pagination-input" type="number" value="1">
+                                            </div>
+                                            <span>از</span>
+                                            <span class="curent-page-number">16</span>
+                                        </div>
+                                        <div class="pagination-next">
+                                            <a href="#" class="btn-pagination next"><i
+                                                    class="fi fi-rr-arrow-left"></i>صفحه
+                                                بعدی</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="nav-awaiting" role="tabpanel"
+                                aria-labelledby="nav-awaiting-tab">
+                                awaiting
+                            </div>
+                            <div class="tab-pane fade" id="nav-waitingSend" role="tabpanel"
+                                aria-labelledby="nav-waitingSend-tab">
+                                waitingSend
+                            </div>
+                            <div class="tab-pane fade" id="nav-sending" role="tabpanel"
+                                aria-labelledby="nav-sending-tab">
+                                sending
+                            </div>
+                            <div class="tab-pane fade" id="nav-delivered" role="tabpanel"
+                                aria-labelledby="nav-delivered-tab">
+                                delivered
+                            </div>
+                            <div class="tab-pane fade" id="nav-completed" role="tabpanel"
+                                aria-labelledby="nav-completed-tab">
+                                completed
+                            </div>
+                            <div class="tab-pane fade" id="nav-returned" role="tabpanel"
+                                aria-labelledby="nav-returned-tab">
+                                returned
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Exit -->
+    <div class="modal fade" id="modal-exit" tabindex="-1" aria-labelledby="modal-exit-title" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modal-exit-title"><i class="fi fi-rr-sign-out"></i>خروج</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h6 class="msg">از حساب کاربری خود خارج می شوید؟</h6>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary-glass icon-right"><i
+                            class="fi fi-rr-cross"></i>خیر</button>
+                    <button type="button" class="btn btn-primary icon-right"><i class="fi fi-rr-check"></i>بلی</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal Code -->
+    <div class="modal fade" id="modal-code" tabindex="-1" aria-labelledby="modal-code-title" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modal-code-title"><i class="fi fi-rr-pencil"></i>افزودن کد رهگیری</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="forms-group">
+                        <div class="inputgroup">
+                            <label>کد رهگیری</label>
+                            <input type="text" class="input" placeholder="کد 24 رقمی را وارد کنید">
+                            <div class="icon"><i class="fi fi-rr-pencil"></i></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary-glass icon-right"><i
+                            class="fi fi-rr-cross"></i>بستن</button>
+                    <button type="button" class="btn btn-primary icon-right"><i
+                            class="fi fi-rr-check"></i>تایید</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="../js/jquery-3.3.1.min.js"></script>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="../js/scripts-dashboard.js"></script>
+    <script src="../plugin/persian-calender/persian-date.min.js"></script>
+    <script src="../plugin/persian-calender/persian-datepicker.min.js"></script>
+    <script src="../plugin/persian-calender/persian-datepicker-initial.js"></script>
+
+</body>
+
+</html>

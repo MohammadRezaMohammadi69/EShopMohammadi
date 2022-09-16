@@ -1,0 +1,91 @@
+﻿@model IEnumerable<EShop.Models.Users>
+
+@{
+    ViewData["Title"] = "Users";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Users</h1>
+<a class="btn btn-success"  href="Account/Rigester"> ثبت نام </a>
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.UserName)
+            </th>
+      
+            <th>
+                @Html.DisplayNameFor(model => model.Email)
+            </th>
+              <th>
+                @Html.DisplayNameFor(model => model.Age)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Address)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CodePosti)
+            </th>
+        
+            <th>
+               roles
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Active)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.UserName)
+            </td>
+   
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Age)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Address)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CodePosti)
+            </td>
+             <td>
+                 @if( item.UserRole != null )
+                 {
+       @foreach(var role in item.UserRole)
+                    {
+                          <li> @role.Roles.RoleName </li>
+                    }
+                 }
+             
+                  
+             </td>
+         
+            <td>
+                @Html.DisplayFor(modelItem => item.Active)
+            </td>
+            <td>
+         @*       <a asp-action="Edit" asp-route-id="@item.UserId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.UserId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.UserId">Delete</a>*@
+                @Html.ActionLink("Edit","Edit","Home",new {id = item.UserId }, new { @class = "btn btn-sm  btn-danger  ci-edit  mx-1  " })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

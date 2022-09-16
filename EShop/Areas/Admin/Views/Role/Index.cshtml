@@ -1,0 +1,105 @@
+﻿@model IEnumerable<EShop.Models.Roles>
+@{
+	ViewData["Title"] = "Index";
+	Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+@section Styles{
+
+}
+
+<div class="container-fluid">
+	<div id="mainDash" class="main-body-content">
+		@if (TempData["message"] != null)
+		{
+			var eror = await Utilities.JSON.ToObjet<ViewModel.ErorVM>(TempData["message"].ToString());
+			<div class="container pb-3">
+				<div class="col-6 mx-auto alert alert-@eror.AlertClass text-center text-secondary" id="eror" role="alert">
+					@eror.Message
+				</div>
+			</div>
+		}
+		<div class="main-header">
+			<div class="inner">
+				<div class="title">
+					<i class="fi fi-rr-layout-fluid"></i>
+					<h1>لیست نقش ها</h1>
+				</div>
+			</div>
+		</div>
+		<div class="main-inner">
+			<!--!-->
+			<div class="table-content">
+				<!--!-->
+				<h6>نقش کاربران  </h6>
+				<div class="table-inner table-responsive">
+					<table class="table align-middle table-striped">
+						<!--!-->
+						<thead>
+							<tr>
+								<th class="col text-center"> # </th>
+								<th class="col text-center">نام نقش</th>
+								<th class="col text-center">عملیات</th>
+							</tr>
+						</thead>
+						<tbody>
+							@{
+								int counter = 0;
+							}
+							@foreach (var item in Model)
+							{
+								<tr>
+									<td class="col text-center"> @(counter = counter+1) </td>
+									<td class="col text-center">@item.RoleName</td>
+									<td class="text-center">
+@*										<a class="btn-table bg-primary p-1" href="@Url.Action("EditRole","Role",new {id = item.RoleId })"><i class="fi fi-rr-pencil"></i></a>
+*@										<a class="btn-table bg-danger  p-1 deluser" href="@Url.Action("DeleteRole","Role",new {id = item.RoleId })"><i class="fi fi-rr-trash"></i></a>
+									</td>
+								</tr>
+							}
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="modal fade show" id="modal-message" tabindex="-1" aria-labelledby="modal-delete-title" aria-modal="true">
+	<div class="modal-dialog modal-dialog-centered">
+		<div class="modal-content">
+			<div class="modal-header ">
+				<h5 class="modal-title" id="modal-delete-title"><i class="fi fi-rr-trash"></i>حذف</h5>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			</div>
+			<div class="modal-body">
+				<p>آیا از حذف این نقش اطمینان دارید ؟ </p>
+			</div>
+			<div class="modal-footer">
+				<button id="cancel-btn" type="button" class="btn btn-primary-glass icon-right" data-bs-dismiss="modal"> <i class="fi fi-rr-cross"></i> خیر</button>
+				<button id="delete-btn" type="button" class="btn btn-danger icon-right"><i class="fi fi-rr-check"></i> بلی </button>
+			</div>
+		</div>
+	</div>
+</div>
+ 
+@section Scripts
+{
+<script>
+	$(document).ready(function () {
+	   $("#eror").delay(1500).slideUp(2000);
+				   $(".deluser").click(function (e) {
+				e.preventDefault();
+				$('#modal-message').modal('show');
+				var selecteditem = $(this).val("id");
+
+				$('#delete-btn').click(function () {
+					window.location.href = selecteditem.attr("href");
+				});
+				$('#cancel-btn').click(function () {
+					$('#modal-message').modal('hide');
+				});
+			});
+	 });
+</script>
+
+}
